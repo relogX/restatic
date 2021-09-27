@@ -11,8 +11,9 @@ import (
 func Run() {
 	log.Infof("server listening on http://localhost:%d", config.Port)
 
-	fs := http.FileServer(http.Dir(config.Directory))
-	if err := http.ListenAndServe(fmt.Sprintf(":%d", config.Port), fs); err != nil {
+	addr := fmt.Sprintf(":%d", config.Port)
+	handler := NewFSHandler()
+	if err := http.ListenAndServe(addr, handler); err != nil {
 		log.Fatal(err)
 	}
 }
