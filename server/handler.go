@@ -24,9 +24,10 @@ type fInfo struct {
 	ModTime string
 	Size    string
 	Path    string
+	IsDir   bool
 }
 type dInfo struct {
-	Name string
+	Path string
 }
 
 func ByteCountIEC(b int64) string {
@@ -60,6 +61,7 @@ func toFInfo(entry os.DirEntry, pwd string) *fInfo {
 		ModTime: info.ModTime().Format(time.RFC1123),
 		Size:    ByteCountIEC(info.Size()),
 		Path:    path,
+		IsDir:   entry.Type().IsDir(),
 	}
 }
 
@@ -72,13 +74,13 @@ func toFInfos(infos []os.DirEntry, pwd string) []*fInfo {
 }
 
 func toDInfo(info os.FileInfo, pwd string) *dInfo {
-	path, err := filepath.Abs(pwd)
+	path, err := filepath.Rel(config.Directory, pwd)
 	if err != nil {
 		return nil
 	}
 
 	return &dInfo{
-		Name: filepath.Base(path),
+		Path: path,
 	}
 }
 

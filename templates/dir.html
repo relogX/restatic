@@ -1,12 +1,13 @@
 {{template "layout" .}}
 {{define "content"}}
-    <h1>{{.DirInfo.Name}}</h1>
+    <h1>{{.DirInfo.Path}}</h1>
     <table>
         <tbody>
             {{range .Files}}
                 <tr>
                     <td>
-                        <a href="/{{.Path}}/{{.Name}}">{{.Name}}</a>
+                        <span>{{if .IsDir}}📁{{else}}&nbsp;&nbsp;{{end}}</span>
+                        <span><a href="/{{.Path}}/{{.Name}}">{{.Name}}</a></span>
                     </td>
                     <td>{{.Size}}</td>
                     <td>{{.Mode}}</td>
