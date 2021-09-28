@@ -71,9 +71,14 @@ func toFInfos(infos []os.DirEntry, pwd string) []*fInfo {
 	return fInfos
 }
 
-func toDInfo(info os.FileInfo) *dInfo {
+func toDInfo(info os.FileInfo, pwd string) *dInfo {
+	path, err := filepath.Abs(pwd)
+	if err != nil {
+		return nil
+	}
+
 	return &dInfo{
-		Name: info.Name(),
+		Name: filepath.Base(path),
 	}
 }
 
@@ -93,7 +98,7 @@ func writeDirectory(w http.ResponseWriter, path string, dirInfo os.FileInfo) {
 	w.WriteHeader(http.StatusOK)
 	tmpl.Execute(w, dirlist{
 		Files:   toFInfos(files, path),
-		DirInfo: toDInfo(dirInfo),
+		DirInfo: toDInfo(dirInfo, path),
 	})
 }
 
