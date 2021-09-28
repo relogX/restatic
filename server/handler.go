@@ -27,6 +27,7 @@ type fInfo struct {
 	IsDir   bool
 }
 type dInfo struct {
+	Name string
 	Path string
 }
 
@@ -74,12 +75,15 @@ func toFInfos(infos []os.DirEntry, pwd string) []*fInfo {
 }
 
 func toDInfo(info os.FileInfo, pwd string) *dInfo {
-	path, err := filepath.Rel(config.Directory, pwd)
+	name, err := filepath.Rel(config.Directory, pwd)
 	if err != nil {
 		return nil
 	}
 
+	path := filepath.Dir(pwd)
+
 	return &dInfo{
+		Name: name,
 		Path: path,
 	}
 }

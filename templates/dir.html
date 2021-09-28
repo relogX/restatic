@@ -1,8 +1,16 @@
 {{template "layout" .}}
 {{define "content"}}
-    <h1>{{.DirInfo.Path}}</h1>
+    <h1>
+        <span>{{.DirInfo.Name}}</span>
+    </h1>
     <table>
         <tbody>
+            <tr>
+                <td>
+                    <span>&nbsp;&nbsp;</span>
+                    <span><a href="/{{.DirInfo.Path}}">⮢</a></span>
+                </td>
+            </tr>
             {{range .Files}}
                 <tr>
                     <td>
