@@ -22,7 +22,10 @@ To use Restatic download the latest release for your platform from [restatic/rel
 
 ## Relog Umbrella
 <div align="center">
+<br />
 <img width="240" src="https://user-images.githubusercontent.com/4745789/133601178-711aa4eb-f836-4e93-a554-22006648f75f.png" align="center" alt="relog logo" />
+<br />
+<br />
 </div>
 
 Relog consists of a lot of handy utilities, systems, and projects that are aimed at making people realize how easy it is to build seemingly complex components. All the projects are open sourced and fall under [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0). You can check out all the open source projects at [github.com/relogHQ](https://github.com/relogHQ).
