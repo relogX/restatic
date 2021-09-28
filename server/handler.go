@@ -3,6 +3,7 @@ package server
 import (
 	"fmt"
 	"html/template"
+	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
@@ -108,9 +109,26 @@ func writeDirectory(w http.ResponseWriter, path string, dirInfo os.FileInfo) {
 	})
 }
 
-func writeFile(w http.ResponseWriter, info os.FileInfo) {
+func writeFile(w http.ResponseWriter, path string, info os.FileInfo) {
+	f, err := os.Open(path)
+	if os.IsNotExist(err) {
+		w.WriteHeader(http.StatusNotFound)
+		return
+	}
+	if err != nil {
+		write500(w)
+		return
+	}
+	defer f.Close()
+
+	b, err := ioutil.ReadAll(f)
+	if err != nil {
+		write500(w)
+		return
+	}
+
 	w.WriteHeader(http.StatusOK)
-	w.Write([]byte("file"))
+	w.Write(b)
 }
 
 func (f fsHandler) ServeHTTP(w http.ResponseWriter, request *http.Request) {
@@ -137,7 +155,7 @@ func (f fsHandler) ServeHTTP(w http.ResponseWriter, request *http.Request) {
 		return
 	}
 
-	writeFile(w, info)
+	writeFile(w, path, info)
 }
 
 func NewFSHandler() *fsHandler {
