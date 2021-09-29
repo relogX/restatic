@@ -36,6 +36,10 @@ INFO[0000] server listening on :4001
 INFO[0000] =========================
 ```
 
+ 4. Browsing the URL on your favourite browser will load a webpage like this
+
+![screen-01](https://user-images.githubusercontent.com/4745789/135251623-f8ea8024-75b7-4150-a869-26135212822d.PNG)
+
 ##  Developing Restatic
 
 If you are a developer and want to modify restatic, you will have first to set up a dev environment, and it has the following pre-requisites
