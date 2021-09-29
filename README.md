@@ -5,22 +5,21 @@
 
 [![Release](https://img.shields.io/github/release/relogHQ/restatic/all.svg)](https://github.com/relogHQ/restatic/releases)
 [![Twitter Follow](https://img.shields.io/twitter/follow/relogHQ.svg?label=Follow&style=social)](https://twitter.com/intent/follow?screen_name=relogHQ)
-
 [![License](https://img.shields.io/github/license/apache/pinot.svg)](LICENSE)
 
 </div>
 
 #  What is Restatic?
 
-Restatic is a simple HTTP server that serves a local directory over HTTP. It is written in [Go](https://golang.org/) and its usage is inspired by [Python's](https://www.python.org/)  [http.server](https://docs.python.org/3/library/http.server.html) module.
+Restatic is a simple HTTP server that serves a local directory over HTTP. It is written in [Go](https://golang.org/), and its usage is inspired by [Python's](https://www.python.org/)  [http.server](https://docs.python.org/3/library/http.server.html) module.
 
 ##  Using Restatic
 
-To use Restatic download the latest release for your platform from  and fire the following commands
+To use Restatic, download the latest release for your platform and fire the following commands.
 
  1. Download the latest [restatic/releases](https://github.com/relogHQ/restatic/releases) for your platform.
- 2. Extract the binary from the compressed artifact
- 3. Execute the binary
+ 2. Extract the binary from the just downloaded compressed artifact
+ 3. Execute the binary as shown in the following steps
 
 ```
 $ ./restatic -p 4001 -d .
@@ -33,28 +32,34 @@ $ ./restatic -p 4001 -d .
 
         by Relog - https://relog.in
 
-INFO[0000] server listening on :4001                    
-INFO[0000] ========================
+INFO[0000] server listening on :4001  
+INFO[0000] =========================
 ```
-  
+
 ##  Developing Restatic
 
-Here are the pre-requisites for setting up the development environment.
+If you are a developer and want to modify restatic, you will have first to set up a dev environment, and it has the following pre-requisites
 
-- Go 1.17.1
+- [Go 1.17.1](https://golang.org/)
 
-The steps:
-- Clone the repository
+Once you have set up all the pre-requisites, following the steps to start your development server.
+
+- Clone the repository https://github.com/relogHQ/restatic
 - Start the server `go run cmd/restatic/main.go`
 
+Once you start the server, it will download all the necessary packages and listen to the configured port. The default port is 5030.
+
 ##  Linting
-Before you commit, ensure that the code is formatted using `gofmt` and to do that execute
+
+Maintaining coding standards is extremely critical, and restatic follows the standard [Gofmt](https://pkg.go.dev/cmd/gofmt) to reformat the code. It is customary to fire the following command before you commit.
+
 ```
 make lint
 ```
-##  Guidelines
 
-If you are a developer and want to contribute to the project, please follow the [code contribution guidelines](https://github.com/relogHQ/restatic/blob/master/CONTRIBUTING.md).
+##  Contribution Guidelines
+
+The Code Contribution Guidelines are published at [CONTRIBUTING.md](https://github.com/relogHQ/restatic/blob/master/CONTRIBUTING.md); please read them before you start making any changes. This would allow us to have a consistent standard of coding practices and developer experience.
 
 ##  Relog Umbrella
 <div align="center">
@@ -64,7 +69,7 @@ If you are a developer and want to contribute to the project, please follow the 
 <br />
 </div>
 
-Relog consists of a lot of handy utilities, systems, and projects that are aimed at making people realize how easy it is to build seemingly complex components. All the projects are open sourced and fall under [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0). You can check out all the open source projects at [github.com/relogHQ](https://github.com/relogHQ).
+[Relog](https://relog.in) is an initiative that aims to transform engineering education and provide high-quality engineering courses, projects, and resources to the community. To better understand all the common systems, we aim to build our own replicated utilities, for example, a load balancer, static file server, API rate limiter, etc. All the projects fall under [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0), and you can find their source code at [github.com/relogHQ](https://github.com/relogHQ).
 
 ##  License
 Restatic is under [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)

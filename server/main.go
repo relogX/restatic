@@ -25,7 +25,7 @@ func Run() {
 	handler := NewFSHandler()
 
 	log.Infof("server listening on %s", addr)
-	log.Infof("========================")
+	log.Infof("=========================")
 
 	if err := http.ListenAndServe(addr, handler); err != nil {
 		log.Fatal(err)
