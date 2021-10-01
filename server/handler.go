@@ -137,9 +137,9 @@ func (f fsHandler) ServeHTTP(w http.ResponseWriter, request *http.Request) {
 		log.Fatal(err)
 	}
 
-	path := path.Clean(path.Join(baseDir, request.URL.Path))
+	cPath := path.Clean(path.Join(baseDir, request.URL.Path))
 
-	info, err := os.Stat(path)
+	info, err := os.Stat(cPath)
 	if os.IsNotExist(err) {
 		http.NotFound(w, request)
 		return
@@ -151,11 +151,18 @@ func (f fsHandler) ServeHTTP(w http.ResponseWriter, request *http.Request) {
 	}
 
 	if info.IsDir() {
-		writeDirectory(w, path, info)
+		iPath := path.Clean(path.Join(cPath, "index.html"))
+		iInfo, err := os.Stat(iPath)
+		if err == nil && !iInfo.IsDir() {
+			writeFile(w, iPath, iInfo)
+			return
+		} else {
+			writeDirectory(w, cPath, info)
+		}
 		return
 	}
 
-	writeFile(w, path, info)
+	writeFile(w, cPath, info)
 }
 
 func NewFSHandler() *fsHandler {
