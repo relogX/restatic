@@ -6,15 +6,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{{if .DirInfo.Name}}{{.DirInfo.Name}} | {{end}}Restatic</title>
         <style>
+            :root {
+                --font-color: #eee;
+                --file-color: #55ff55;
+                --bg-color: #0a0a0a;
+            }
+
+            [data-theme="light"] {
+                --font-color: #111;
+                --file-color: #066dab;
+                --bg-color: #fff;
+            }
+
             body {
                 font-family: monospace;
-                background-color: #0a0a0a;
-                color: #eee;
+                background-color: var(--bg-color);
+                color: var(--font-color);
                 font-size: 1.4em;
                 line-height: 1.3em;
             }
             a, a:active, a:visited {
-                color: #55ff55;
+                color: var(--file-color);
             }
             td {
                 padding: 0.2em 1em;
@@ -22,7 +34,30 @@
         </style>
     </head>
     <body>
+        <div>
+            <div class="themes" style="position: absolute; top: 1em; right: 1em;">
+                <span>Themes</span>
+                <input type="radio" name="theme" value="dark" onclick="changeTheme(this);">
+                    <label>dark</label>
+                </input>
+                <input type="radio" name="theme" value="light" onclick="changeTheme(this);">
+                    <label>light</label>
+                </input>
+            </div>
+        </div>
         {{block "content" .}}{{end}}
     </body>
+    <script>
+        function changeTheme(e) {
+            document.documentElement.setAttribute('data-theme', e.value);
+            localStorage.setItem('theme', e.value);
+        }
+
+        const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+        if (currentTheme) {
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            document.querySelector("input[name='theme'][value='" + currentTheme + "']").checked = true
+        }
+    </script>
 </html>
 {{end}}
