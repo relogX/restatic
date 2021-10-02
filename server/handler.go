@@ -76,16 +76,22 @@ func toFInfos(infos []os.DirEntry, pwd string) []*fInfo {
 }
 
 func toDInfo(info os.FileInfo, pwd string) *dInfo {
-	name, err := filepath.Rel(config.Directory, pwd)
+	rPath, err := filepath.Rel(config.Directory, pwd)
 	if err != nil {
 		return nil
 	}
 
-	path := filepath.Dir(pwd)
+	pPath := filepath.Dir(rPath)
+
+	if rPath == "." {
+		rPath = filepath.Base(config.Directory)
+	} else {
+		rPath = path.Join(filepath.Base(config.Directory), rPath)
+	}
 
 	return &dInfo{
-		Name: name,
-		Path: path,
+		Name: rPath,
+		Path: pPath,
 	}
 }
 
