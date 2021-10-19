@@ -4,8 +4,8 @@
 ---------------------------------------
 
 [![Release](https://img.shields.io/github/release/relogX/restatic/all.svg)](https://github.com/relogX/restatic/releases)
-[![Twitter Follow](https://img.shields.io/twitter/follow/relogX.svg?label=Follow&style=social)](https://twitter.com/intent/follow?screen_name=relogX)
-[![License](https://img.shields.io/github/license/apache/pinot.svg)](LICENSE)
+[![Twitter Follow](https://img.shields.io/twitter/follow/relog_x.svg?label=Follow&style=social)](https://twitter.com/intent/follow?screen_name=relog_x)
+[![License](https://img.shields.io/github/license/relogX/restatic.svg)](LICENSE)
 
 </div>
 
@@ -22,7 +22,7 @@ To use Restatic, download the latest release for your platform and fire the foll
  3. Execute the binary as shown in the following steps
 
 ```
-$ ./restatic -p 4001 -d .
+$ ./restatic -p 5030 -d .
 
         ██████  ███████ ███████ ████████  █████  ████████ ██  ██████ 
         ██   ██ ██      ██         ██    ██   ██    ██    ██ ██      
@@ -32,7 +32,7 @@ $ ./restatic -p 4001 -d .
 
         by Relog - https://relog.in
 
-INFO[0000] server listening on :4001  
+INFO[0000] server listening on :5030
 INFO[0000] =========================
 ```
 
@@ -65,7 +65,7 @@ make lint
 
 The Code Contribution Guidelines are published at [CONTRIBUTING.md](https://github.com/relogX/restatic/blob/master/CONTRIBUTING.md); please read them before you start making any changes. This would allow us to have a consistent standard of coding practices and developer experience.
 
-##  Relog Umbrella
+##  The RelogX Umbrella
 <div align="center">
 <br />
 <img  width="240"  src="https://user-images.githubusercontent.com/4745789/133601178-711aa4eb-f836-4e93-a554-22006648f75f.png" align="center"  alt="relog logo" />
