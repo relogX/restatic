@@ -65,7 +65,7 @@ make lint
 
 The Code Contribution Guidelines are published at [CONTRIBUTING.md](https://github.com/relogX/restatic/blob/master/CONTRIBUTING.md); please read them before you start making any changes. This would allow us to have a consistent standard of coding practices and developer experience.
 
-##  Relog Umbrella
+##  The RelogX Umbrella
 <div align="center">
 <br />
 <img  width="240"  src="https://user-images.githubusercontent.com/4745789/133601178-711aa4eb-f836-4e93-a554-22006648f75f.png" align="center"  alt="relog logo" />
