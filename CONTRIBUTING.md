@@ -1,6 +1,6 @@
 # Contribution Guidelines
 
-Before you begin to contribute, make sure you have reviewed [Dev Environment Setup](https://github.com/relogHQ/restatic/blob/master/README.md) sections and that you have created your own fork of the source code.
+Before you begin to contribute, make sure you have reviewed [Dev Environment Setup](https://github.com/relogX/restatic/blob/master/README.md) sections and that you have created your own fork of the source code.
 
 ### Create a design document
 
@@ -8,7 +8,7 @@ If your change is relatively minor, you can skip this step. If you are adding ne
 
 ### Create an issue for the change
 
-Create an issue [here](https://github.com/relogHQ/restatic/issues) for the change you would like to make. Provide information on why the change is needed and how you plan to address it. Use the conversations on the issue as a way to validate assumptions and the right way to proceed.
+Create an issue [here](https://github.com/relogX/restatic/issues) for the change you would like to make. Provide information on why the change is needed and how you plan to address it. Use the conversations on the issue as a way to validate assumptions and the right way to proceed.
 
 If you have a design document, please refer to the design documents in your Issue. You may even want to create multiple issues depending on the extent of your change.
 
@@ -70,7 +70,7 @@ $ git add <files required for the change>
 $ git commit -m "Meaningful oneliner for the change"
 $ git push origin <your issue branch>
 
-After this, create a PullRequest in `github <https://github.com/relogHQ/restatic/pulls>`_. Include the following information in the description:
+After this, create a PullRequest in `github <https://github.com/relogX/restatic/pulls>`_. Include the following information in the description:
 
   * The changes that are included in the PR.
 

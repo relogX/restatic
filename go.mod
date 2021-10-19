@@ -1,4 +1,4 @@
-module github.com/relogHQ/restatic
+module github.com/relogX/restatic
 
 go 1.17
 

@@ -3,8 +3,8 @@
 
 ---------------------------------------
 
-[![Release](https://img.shields.io/github/release/relogHQ/restatic/all.svg)](https://github.com/relogHQ/restatic/releases)
-[![Twitter Follow](https://img.shields.io/twitter/follow/relogHQ.svg?label=Follow&style=social)](https://twitter.com/intent/follow?screen_name=relogHQ)
+[![Release](https://img.shields.io/github/release/relogX/restatic/all.svg)](https://github.com/relogX/restatic/releases)
+[![Twitter Follow](https://img.shields.io/twitter/follow/relogX.svg?label=Follow&style=social)](https://twitter.com/intent/follow?screen_name=relogX)
 [![License](https://img.shields.io/github/license/apache/pinot.svg)](LICENSE)
 
 </div>
@@ -17,7 +17,7 @@ Restatic is a simple HTTP server that serves a local directory over HTTP. It is 
 
 To use Restatic, download the latest release for your platform and fire the following commands.
 
- 1. Download the latest [restatic/releases](https://github.com/relogHQ/restatic/releases) for your platform.
+ 1. Download the latest [restatic/releases](https://github.com/relogX/restatic/releases) for your platform.
  2. Extract the binary from the just downloaded compressed artifact
  3. Execute the binary as shown in the following steps
 
@@ -48,7 +48,7 @@ If you are a developer and want to modify restatic, you will have first to set u
 
 Once you have set up all the pre-requisites, following the steps to start your development server.
 
-- Clone the repository https://github.com/relogHQ/restatic
+- Clone the repository https://github.com/relogX/restatic
 - Start the server `go run cmd/restatic/main.go`
 
 Once you start the server, it will download all the necessary packages and listen to the configured port. The default port is 5030.
@@ -63,7 +63,7 @@ make lint
 
 ##  Contribution Guidelines
 
-The Code Contribution Guidelines are published at [CONTRIBUTING.md](https://github.com/relogHQ/restatic/blob/master/CONTRIBUTING.md); please read them before you start making any changes. This would allow us to have a consistent standard of coding practices and developer experience.
+The Code Contribution Guidelines are published at [CONTRIBUTING.md](https://github.com/relogX/restatic/blob/master/CONTRIBUTING.md); please read them before you start making any changes. This would allow us to have a consistent standard of coding practices and developer experience.
 
 ##  Relog Umbrella
 <div align="center">
@@ -73,7 +73,7 @@ The Code Contribution Guidelines are published at [CONTRIBUTING.md](https://gith
 <br />
 </div>
 
-[Relog](https://relog.in) is an initiative that aims to transform engineering education and provide high-quality engineering courses, projects, and resources to the community. To better understand all the common systems, we aim to build our own replicated utilities, for example, a load balancer, static file server, API rate limiter, etc. All the projects fall under [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0), and you can find their source code at [github.com/relogHQ](https://github.com/relogHQ).
+[Relog](https://relog.in) is an initiative that aims to transform engineering education and provide high-quality engineering courses, projects, and resources to the community. To better understand all the common systems, we aim to build our own replicated utilities, for example, a load balancer, static file server, API rate limiter, etc. All the projects fall under [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0), and you can find their source code at [github.com/relogX](https://github.com/relogX).
 
 ##  License
 Restatic is under [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)

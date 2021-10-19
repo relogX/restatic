@@ -11,7 +11,7 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/relogHQ/restatic/config"
+	"github.com/relogX/restatic/config"
 )
 
 type fsHandler struct{}

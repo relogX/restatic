@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/relogHQ/restatic/config"
+	"github.com/relogX/restatic/config"
 	log "github.com/sirupsen/logrus"
 )
 

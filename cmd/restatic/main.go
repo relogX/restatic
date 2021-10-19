@@ -4,8 +4,8 @@ import (
 	"flag"
 	"path/filepath"
 
-	"github.com/relogHQ/restatic/config"
-	"github.com/relogHQ/restatic/server"
+	"github.com/relogX/restatic/config"
+	"github.com/relogX/restatic/server"
 )
 
 func main() {
